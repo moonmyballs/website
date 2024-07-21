@@ -1,39 +1,386 @@
+/* 
+
+TODO:
+- ! size change !
+- overflow-x: hidden; ?
+- 'html' element ?
+- body: display: inline-block; ?
+- navbar 'z-index' ?
+-
+
+& remove comments
+*/
+
+.footer-ph {
+    height: 400px;
+    width: 100%;
+    background-color: turquoise;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------ */
+
+
 * {
-    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
 }
 
-html,
+:root {
+    --grey: #222;
+    --orange: #FB9328;
+    --white: #FFF;
+    --black: #000;
+}
+
+/* COLORS */
+.white-text {
+    color: var(--white);
+}
+.white-bg {
+    background-color: var(--white);
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
 body {
-    overflow-x: hidden;
-    font-family: 'Archivo Black';
-    
-}
-@keyframes customBounce {
-    30% {
-        transform: scale(1.2);
-    }
-
-    40%,
-    60% {
-        transform: rotate(-20deg) scale(1.2);
-    }
-
-    50% {
-        transform: rotate(20deg) scale(1.2);
-    }
-
-    70% {
-        transform: rotate(0deg) scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    background-color: var(--grey);
 }
 
-.about-logos {
-    animation: customBounce 1.5s infinite;
+main {
+    position: relative;
 }
-.w-full button:hover .svgg path {
-    fill: black;
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+span,
+p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    letter-spacing: 0.2px;
+}
+
+/* ! size change ! */
+h1 {
+    font-family: "Changa", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+/* ! size change ! */
+h2 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+
+    /* ? */
+    font-variant: small-caps;
+}
+
+/* ! unused ! */
+h4 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+/* ! size change ! */
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+/* Fonts  */
+
+.text-font-3 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+/* Buttons  */
+
+.btn-primary,
+.btn-secondary {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+/* ! size change ! */
+.btn-primary {
+    width: 250px;
+    /* 329px */
+    height: 60px;
+    /* 84px */
+    border-radius: 40px;
+}
+
+/* ! size change ! */
+.btn-secondary {
+    width: 127px;
+    height: 52px;
+    border-radius: 30px;
+}
+
+.btn-dark-bg,
+.btn-light-bg {
+    background: var(--orange);
+}
+
+.btn-dark-bg {
+    color: var(--grey);
+}
+
+.btn-dark-bg:hover {
+    background: transparent;
+    color: var(--white);
+    border: var(--white) 4px solid;
+}
+
+.btn-light-bg {
+    color: var(--white);
+}
+
+.btn-light-bg:hover {
+    background: transparent;
+    color: var(--black);
+    border: var(--black) 4px solid;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+/* HEADER */
+
+.navbar-ph {
+    height: 120px;
+}
+
+.nav-container {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 22px;
+    background-color: rgba(34, 34, 34, 0.8);
+    z-index: 2;
+}
+
+/* ! size change ! */
+/* 'margin-left' order */
+.nav-content {
+    position: absolute;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ! size change ! */
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* margin-right: 56px; */
+}
+
+/* ! size change ! */
+.nav-logo-image {
+    height: 55px;
+    width: 55px;
+
+    margin-right: 15px;
+}
+
+/* ! size change ! */
+.nav-logo-text {
+    color: var(--orange);
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+
+/* ! size change ! */
+.nav-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 510px;
+}
+
+/* ! size change ! */
+.nav-list-item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    color: var(--white);
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+/* Sections */
+
+.section-container {
+    margin: 0 auto;
+}
+
+/* height / padding per section? */
+.section-content {
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+    width: 1000px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+
+/* #1 */
+
+/* ! size change ! */
+.home-main-title {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+}
+
+/* ! size change ! */
+.home-main-image {
+    position: absolute;
+    right: -100px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+}
+
+
+/* #2 */
+
+.roadmap-title {
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+
+/* GRID */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 80px;
+    row-gap: 70px;
+}
+
+.grid-odd-img,
+.grid-even-img {
+    position: relative;
+    width: 100px;
+    height: 191px;
+}
+
+.grid-odd-img {
+    bottom: 41px;
+}
+
+.grid-even-img {
+    top: 41px;
+}
+
+/* ! size change ! */
+.grid-item {
+    grid-column: span 2;
+    position: relative;
+    width: 100px;
+    height: 72px;
+}
+
+/* ! size change ! */
+.grid-top-item,
+.grid-bottom-item {
+    position: absolute;
+    width: 300px;
+    height: 72px;
+    text-align: center;
+    color: var(--white);
+}
+
+.grid-top-item {
+    left: -100px;
+}
+
+.grid-bottom-item {
+    left: 75px;
+}
+
+
+/* #3 */
+
+.wtb-title {
+    padding-bottom: 60px;
+}
+
+.wtb-p-container {
+    width: 680px;
+    padding-bottom: 40px;
+}
+.wtb-p-container:last-child{
+    padding-bottom: 0;
+}
+.wtb-p-container h2{
+    display: inline;
 }
