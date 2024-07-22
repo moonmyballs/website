@@ -6,7 +6,7 @@ TODO:
 - 'html' element ?
 - body: display: inline-block; ?
 - navbar 'z-index' ?
--
+- images brakes the width when zooming-in 
 
 & remove comments
 */
@@ -38,6 +38,7 @@ TODO:
 .white-text {
     color: var(--white);
 }
+
 .white-bg {
     background-color: var(--white);
 }
@@ -45,6 +46,7 @@ TODO:
 .orange-text {
     color: var(--orange);
 }
+
 
 body {
     background-color: var(--grey);
@@ -87,9 +89,9 @@ h1 {
 
 /* ! size change ! */
 h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
-    line-height: 36px;
+    line-height: 32px;
 }
 
 h3 {
@@ -126,17 +128,6 @@ button {
 img {
     width: 100%;
     height: 100%;
-}
-
-
-/* ------------------------------------------------------------------------------ */
-
-/* Fonts  */
-
-.text-font-3 {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
 }
 
 
@@ -197,10 +188,6 @@ img {
 
 /* HEADER */
 
-.navbar-ph {
-    height: 120px;
-}
-
 .nav-container {
     position: fixed;
     width: 100%;
@@ -212,16 +199,15 @@ img {
 }
 
 /* ! size change ! */
-/* 'margin-left' order */
 .nav-content {
     position: absolute;
     left: 50%;
-    margin-left: -500px;
     width: 1000px;
     height: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: -500px;
 }
 
 /* ! size change ! */
@@ -274,16 +260,54 @@ img {
 
 /* Sections */
 
+.top-page-space {
+    height: 120px;
+}
+
 .section-container {
     margin: 0 auto;
 }
+
+
+/* article */
+.article-container {
+    position: relative;
+    width: 600px;
+}
+
+.article-container h1 {
+    color: orange;
+    padding-bottom: 60px;
+}
+
+.article-container p {
+    padding-bottom: 40px;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.article-container>*:last-child {
+    padding-bottom: 0;
+}
+
+.article-inline-wrapper {
+    padding-bottom: 40px;
+}
+
+.article-inline-wrapper>h2,
+.article-inline-wrapper>p {
+    display: inline;
+}
+
 
 /* height / padding per section? */
 .section-content {
     position: relative;
     left: 50%;
-    margin-left: -500px;
     width: 1000px;
+    margin-left: -500px;
     padding-top: 200px;
     padding-bottom: 100px;
 }
@@ -291,16 +315,17 @@ img {
 
 /* #1 */
 
-/* ! size change ! */
-.home-main-title {
+/* very global styles. maybe can be changed to global 'card' of 'h1' & btn */
+.home-content {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     height: 250px;
+    /* ! size change ! */
 }
 
 /* ! size change ! */
-.home-main-image {
+.home-image {
     position: absolute;
     right: -100px;
     top: 100px;
@@ -326,18 +351,18 @@ img {
     row-gap: 70px;
 }
 
-.grid-odd-img,
-.grid-even-img {
+.grid-odd-image,
+.grid-even-image {
     position: relative;
     width: 100px;
     height: 191px;
 }
 
-.grid-odd-img {
+.grid-odd-image {
     bottom: 41px;
 }
 
-.grid-even-img {
+.grid-even-image {
     top: 41px;
 }
 
@@ -370,17 +395,41 @@ img {
 
 /* #3 */
 
-.wtb-title {
-    padding-bottom: 60px;
+.wtb-image {
+    position: absolute;
+    top: 340px;
+    right: -50px;
+    width: 420px;
+    height: 500px;
 }
 
-.wtb-p-container {
-    width: 680px;
-    padding-bottom: 40px;
+
+/* #4 */
+
+.crypto-article {
+    position: relative;
+    left: 300px;
 }
-.wtb-p-container:last-child{
-    padding-bottom: 0;
+
+.crypto-image {
+    position: absolute;
+    top: 340px;
+    left: -100px;
+    width: 360px;
+    height: 600px;
 }
-.wtb-p-container h2{
-    display: inline;
+
+
+/* #5 */
+
+.narratives-image {
+    position: absolute;
+    top: 270px;
+    right: -50px;
+    width: 460px;
+    height: 700px;    
 }
+
+
+/* #6 */
+
