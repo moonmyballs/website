@@ -344,7 +344,7 @@ img {
 
     /* #4 CRYPTO */
 
-    & .crypto-article {
+    & .crypto {
         position: relative;
         left: 300px;
     }
@@ -360,7 +360,7 @@ img {
 
     /* #5 NARRATIVES */
 
-    & .narratives-article {
+    & .narratives {
         padding-bottom: 60px;
     }
 
