@@ -35,10 +35,6 @@ body {
     background-color: var(--grey);
 }
 
-main {
-    position: relative;
-}
-
 ul {
     list-style-type: none;
 }
