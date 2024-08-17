@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+/* todo - add colors */
 :root {
     --grey: #222;
     --orange: #FB9328;
@@ -35,6 +36,10 @@ body {
     background-color: var(--grey);
 }
 
+main {
+    overflow: hidden;
+}
+
 ul {
     list-style-type: none;
 }
@@ -58,11 +63,18 @@ p {
     letter-spacing: 0.2px;
 }
 
+/* todo */
 h1 {
-    font-family: "Changa", sans-serif;
     font-size: 36px;
-    font-weight: 400;
-    line-height: 45px;
+    font-weight: 800;
+    line-height: 54px;
+
+    @media only screen and (min-width : 1224px) {
+        font-family: "Changa", sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 45px;
+    }
 }
 
 h2 {
@@ -71,6 +83,7 @@ h2 {
     line-height: 32px;
 }
 
+/* todo */
 h3 {
     font-weight: 700;
     font-size: 17px;
@@ -147,12 +160,20 @@ img {
 }
 
 .btn-primary {
-    width: 250px;
-    height: 60px;
-    border-radius: 40px;
-    font-size: 24px;
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 32px;
+    line-height: 24px;
+
+    @media only screen and (min-width : 1224px) {
+        width: 250px;
+        height: 60px;
+        border-radius: 40px;
+        font-size: 24px;
+        line-height: 32px;
+    }
 }
 
 .btn-secondary {
@@ -166,7 +187,9 @@ img {
 
 .btn-dark-bg,
 .btn-light-bg {
-    background: var(--orange);
+    @media only screen and (min-width : 1224px) {
+        background: var(--orange);
+    }
 }
 
 .btn-dark-bg:hover,
@@ -175,6 +198,7 @@ img {
 }
 
 .btn-dark-bg {
+    background: var(--orange);
     color: var(--grey);
 }
 
@@ -185,7 +209,13 @@ img {
 }
 
 .btn-light-bg {
-    color: var(--white);
+    color: var(--orange);
+    border: 3px var(--orange) solid;
+
+    @media only screen and (min-width : 1224px) {
+        color: var(--white);
+        border: none;
+    }
 }
 
 .btn-light-bg:hover {
@@ -199,14 +229,17 @@ img {
 
 .nav-container {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     padding-top: 59px;
-    background-color: rgba(34, 34, 34, 0.8);
+    background: rgba(26, 25, 25, 0.67);
+    backdrop-filter: blur(6.800000190734863px);
     z-index: 2;
 
     @media only screen and (min-width : 1224px) {
+        height: 100px;
         padding-top: 22px;
+        background: transparent;
     }
 
     & .nav-content {
@@ -214,8 +247,8 @@ img {
         align-items: center;
         justify-content: space-between;
         position: absolute;
-        left: 8%;
-        width: 84%;
+        left: 8vw;
+        width: 84vw;
 
         @media only screen and (min-width : 1224px) {
             left: 50%;
@@ -231,7 +264,7 @@ img {
             width: 145px;
 
             @media only screen and (min-width : 1224px) {
-                width: 200px;
+                width: 290px;
             }
 
             & .nav-logo-image {
@@ -313,8 +346,19 @@ img {
     }
 }
 
+.top-page-space,
+.home-mobile-bg {
+    background-color: rgba(15, 15, 15, 0.47);
+
+    @media only screen and (min-width : 1224px) {
+        background-color: var(--grey);
+    }
+}
+
 .top-page-space {
-    height: 120px;
+    @media only screen and (min-width : 1224px) {
+        height: 120px;
+    }
 }
 
 .section-container {
@@ -322,11 +366,16 @@ img {
 
     & .section-content {
         position: relative;
-        left: 50%;
-        width: 1000px;
-        margin-left: -500px;
-        padding-top: 175px;
-        padding-bottom: 100px;
+        left: 8vw;
+        width: 84vw;
+        padding: 140px 0;
+
+        @media only screen and (min-width : 1224px) {
+            left: 50%;
+            width: 1000px;
+            margin-left: -500px;
+            padding: 175px 0 100px 0;
+        }
     }
 
     & .article-container {
@@ -366,14 +415,72 @@ img {
         padding-bottom: 60px;
     }
 
-    & .home-image {
-        position: absolute;
-        right: -100px;
-        top: 100px;
-        width: 400px;
-        height: 400px;
+    & .home-image-container {
+        display: inline-block;
+        position: relative;
+        right: 10%;
+        width: 120%;
+
+        @media only screen and (min-width : 1224px) {
+            position: absolute;
+            right: -100px;
+            top: 100px;
+            width: 400px;
+            height: 400px;
+        }
+
+        & .home-image-responsive {
+            margin-top: 100%;
+
+            @media only screen and (min-width : 1224px) {
+                margin-top: 0;
+            }
+
+            & .home-image {
+                position: absolute;
+                bottom: 0;
+                mix-blend-mode: lighten;
+                filter: blur(3.8px);
+                -webkit-filter: blur(6.8px);
+                opacity: 0.4;
+
+                @media only screen and (min-width : 1224px) {
+                    mix-blend-mode: normal;
+                    filter: none;
+                    -webkit-filter: none;
+                    opacity: 1;
+                }
+            }
+        }
     }
 
+    & .mobile-home-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: var(--white);
+
+
+        &>h1 {
+            padding-bottom: 20px;
+        }
+
+        &>h3 {
+            line-height: 30px;
+        }
+
+    }
+
+    & .home-btns-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
 
     /* #2 ROADMAP */
 
@@ -467,7 +574,7 @@ img {
     }
 
 
-    /* #6 BUYTOKENS & #7 SOCIALS */
+    /* #7 SOCIALS & #6 TOKENOMICS & #8 BUY */
 
     & .links-title {
         padding-bottom: 100px;
