@@ -708,8 +708,9 @@
 
     </main>
 
+
     <script>
-        
+
         const mobileMenuIcon = document.getElementById("mobile-menu-icon")
         const navList = document.getElementById("nav-list")
 
@@ -717,6 +718,7 @@
 
         function openMobileMenu(e) {
             event.stopPropagation()
+
             mobileMenuIcon.removeEventListener("click", openMobileMenu)
 
             navList.classList.add("show-mobile-menu")
@@ -726,6 +728,8 @@
         }
 
         function handleMobileMenu(e) {
+            event.stopPropagation()
+
             document.removeEventListener("click", handleMobileMenu)
             navList.classList.remove("show-mobile-menu")
 

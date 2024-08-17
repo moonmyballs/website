@@ -284,7 +284,6 @@ img {
             position: absolute;
             right: 10000px;
             top: 60px;
-            padding: 0 20px;
             background: rgba(61, 61, 61, 0.80);
             backdrop-filter: blur(6.800000190734863px);
             border-radius: 20px;
@@ -304,20 +303,47 @@ img {
             }
 
             & .nav-list-item {
+                position: relative;
                 color: var(--white);
-                width: 120px;
-                padding: 20px 0;
-                border-bottom: 2px white solid;
+                width: 160px;
 
                 @media only screen and (min-width : 1224px) {
                     width: auto;
-                    padding: 0;
                     border-bottom: 0;
                 }
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    width: 140px;
+                    height: 60px;
+                    padding-left: 20px;
+
+                    @media only screen and (min-width : 1224px) {
+                        display: inline;
+                        padding-left: 0;
+                    }
+                }
+
+                & a::after {
+                    position: absolute;
+                    left: 20px;
+                    bottom: 0;
+                    width: 120px;
+                    border-bottom: 2px solid var(--white);
+                    content: "";
+                }
+                
+                @media only screen and (min-width : 1224px) {
+                    a::after {
+                        content: none;
+                    }
+                }
+ 
             }
 
-            & .nav-list-item:last-child {
-                border-bottom: 0;
+            & .nav-list-item:last-child > a::after{
+                content: none;
             }
 
             & .nav-list-item:hover {
