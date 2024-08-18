@@ -333,16 +333,16 @@ img {
                     border-bottom: 2px solid var(--white);
                     content: "";
                 }
-                
+
                 @media only screen and (min-width : 1224px) {
                     a::after {
                         content: none;
                     }
                 }
- 
+
             }
 
-            & .nav-list-item:last-child > a::after{
+            & .nav-list-item:last-child>a::after {
                 content: none;
             }
 
@@ -373,7 +373,7 @@ img {
 }
 
 .top-page-space,
-.home-mobile-bg {
+.mobile-home-bg {
     background-color: rgba(15, 15, 15, 0.47);
 
     @media only screen and (min-width : 1224px) {
@@ -511,8 +511,26 @@ img {
     /* #2 ROADMAP */
 
     & .roadmap-title {
-        padding-bottom: 200px;
+        padding-bottom: 80px;
+
+        @media only screen and (min-width : 1224px) {
+            padding-bottom: 200px;
+        }
+
+        & span {
+            font-family: "Changa", sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 22px;
+
+            @media only screen and (min-width : 1224px) {
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 45px;
+            }
+        }
     }
+
 
     & .roadmap-grid-container {
         display: grid;
