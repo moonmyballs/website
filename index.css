@@ -38,6 +38,9 @@ body {
 
 main {
     overflow: hidden;
+
+    /* todo remove dev */
+    /* height: 10000px; */
 }
 
 ul {
@@ -63,7 +66,6 @@ p {
     letter-spacing: 0.2px;
 }
 
-/* todo */
 h1 {
     font-size: 36px;
     font-weight: 800;
@@ -83,7 +85,6 @@ h2 {
     line-height: 32px;
 }
 
-/* todo */
 h3 {
     font-weight: 700;
     font-size: 17px;
@@ -120,11 +121,8 @@ img {
 }
 
 
+/* todo - remove */
 /* GLOBALS */
-
-.text-center {
-    text-align: center;
-}
 
 
 /* Controls */
@@ -239,7 +237,7 @@ img {
     @media only screen and (min-width : 1224px) {
         height: 100px;
         padding-top: 22px;
-        background: transparent;
+        background: rgba(34, 34, 34, 0.67);
     }
 
     & .nav-content {
@@ -393,10 +391,14 @@ img {
     & .section-content {
         position: relative;
         left: 8vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 84vw;
         padding: 140px 0;
 
         @media only screen and (min-width : 1224px) {
+            display: block;
             left: 50%;
             width: 1000px;
             margin-left: -500px;
@@ -435,6 +437,10 @@ img {
 
 
     /* #1 HOME */
+
+    & .mobile-home-content {
+        display: block;
+    }
 
     & .home-title {
         width: 550px;
@@ -512,6 +518,7 @@ img {
 
     & .roadmap-title {
         padding-bottom: 80px;
+        text-align: center;
 
         @media only screen and (min-width : 1224px) {
             padding-bottom: 200px;
@@ -533,46 +540,89 @@ img {
 
 
     & .roadmap-grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
-        column-gap: 80px;
-        row-gap: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 330px;
+        height: 800px;
+
+        @media only screen and (min-width : 1224px) {
+            flex-direction: row;
+            width: 1000px;
+            height: auto;
+        }
 
         & .grid-item {
-            grid-column: span 2;
-            position: relative;
-            width: 100px;
-            height: 72px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
 
-            & .grid-top-item,
-            .grid-bottom-item {
-                position: absolute;
-                width: 300px;
+            @media only screen and (min-width : 1224px) {
+                flex-direction: column;
+                align-items: initial;
             }
 
-            & .grid-top-item {
-                left: -100px;
+            & .grid-item-line {
+                display: none;
+
+                @media only screen and (min-width : 1224px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 130px;
+
+                }
+
+                & img {
+                    height: 82px;
+                    width: 13px;
+                }
             }
 
-            & .grid-bottom-item {
-                left: 75px;
+            & .grid-item-image {
+                width: 75px;
+                height: 75px;
+
+                @media only screen and (min-width : 1224px) {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            & .grid-item-text {
+                position: relative;
+                height: 70px;
+                display: flex;
+                align-items: center;
+
+                & h5 {
+                    width: 242px;
+
+                    @media only screen and (min-width : 1224px) {
+                        position: absolute;
+                        left: -78px;
+                        width: 256px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            & .grid-item-space {
+                width: 100px;
+                height: 200px;
             }
         }
 
-        & .grid-odd-image,
-        .grid-even-image {
-            position: relative;
-            width: 100px;
-            height: 191px;
+        & .reverse-grid-item {
+            flex-direction: row;
+
+            @media only screen and (min-width : 1224px) {
+                flex-direction: column-reverse;
+            }
         }
 
-        & .grid-odd-image {
-            bottom: 41px;
-        }
-
-        & .grid-even-image {
-            top: 41px;
-        }
+        ;
     }
 
 
@@ -622,6 +672,7 @@ img {
 
     & .links-title {
         padding-bottom: 100px;
+        text-align: center;
 
         & h1 {
             padding-bottom: 20px;
