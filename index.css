@@ -127,7 +127,7 @@ img {
 }
 
 
-/* Controls */
+/* Controls and Globals */
 
 /* todo - !important , */
 .desktop-only {
@@ -144,6 +144,14 @@ img {
     @media only screen and (min-width : 1224px) {
         display: none !important;
     }
+}
+
+.inline-link {
+    color: var(--orange);
+}
+
+.inline-link:hover {
+    text-decoration: underline;
 }
 
 
@@ -262,7 +270,7 @@ img {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 145px;
+            width: 205px;
 
             @media only screen and (min-width : 1224px) {
                 width: 290px;
@@ -562,8 +570,8 @@ img {
         & span {
             font-family: "Changa", sans-serif;
             font-weight: 300;
-            font-size: 16px;
-            line-height: 22px;
+            font-size: 20px;
+            line-height: 24px;
 
             @media only screen and (min-width : 1224px) {
                 font-size: 36px;
@@ -697,10 +705,10 @@ img {
         @media only screen and (min-width : 1224px) {
             display: block;
             position: absolute;
-            top: 340px;
+            top: 430px;
             left: -100px;
             width: 360px;
-            height: 600px;
+            height: 500px;
         }
     }
 
@@ -728,7 +736,7 @@ img {
     /* #6 SOCIALS & #7 TOKENOMICS & #8 BUY */
 
     & .section-links {
-        padding-bottom: 40px;
+        padding-bottom: 0;
 
         & .links-title {
             padding-bottom: 60px;
