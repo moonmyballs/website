@@ -294,11 +294,10 @@ img {
             right: -10000px;
             top: 65px;
             max-height: calc(100vh - 130px);
-            overflow-y: scroll;
             background: rgba(61, 61, 61, 0.97);
             border-radius: 20px;
+            overflow-y: scroll;
             transition: all 0.3s;
-
 
             @media only screen and (min-width : 1224px) {
                 flex-direction: row;
@@ -311,6 +310,7 @@ img {
                 padding: 0;
                 background: transparent;
                 backdrop-filter: none;
+                overflow-y: auto;
                 border-radius: 0;
             }
 
@@ -824,7 +824,7 @@ img {
                     & .png-icon:hover {
                         @media only screen and (min-width : 1224px) {
                             border: var(--white) 3px solid;
-                            box-shadow: unset;
+                            /* box-shadow: unset; */
                         }
                     }
 
