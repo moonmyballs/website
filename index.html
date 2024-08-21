@@ -1,420 +1,759 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Watch more on youtube @codecrypto TG @hirejoey -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon My Balls</title>
-    <!-- Add your CSS framework, e.g., CDN link for Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="dist/output.css" />
     <link rel="stylesheet" href="index.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@500&family=Poppins&family=Roboto:wght@500&family=Rubik+Bubbles&family=Rubik+Doodle+Shadow&family=Tomorrow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet">
 
-
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-
+    <link rel='icon' href='favicon.ico' type='image/x-icon' />
 </head>
 
-<body class="font-Montserrat bg-black">
+<body>
+    <main>
 
-    <!-- Header Section -->
-    <nav class="nav-main ">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="images/logo.png" class="h-12 rounded-full md:h-14" alt="etf" />
-                <span class=" md:hidden lg:block text-lg md:text-3xl font-extrabold whitespace-nowrap text-blue-500"
-                    style="background-image: linear-gradient(to right, rgb(150, 24, 182), violet);
-                color: transparent;
-                -webkit-background-clip: text; /* For Safari and older versions of Chrome */
-                background-clip: text;">Moon My Balls</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button" style="color: cyan;"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-sm md:hidden hover:bg-cyan-500  "
-                aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
-                <span class="sr-only">Open main menu</span>
-                <span id="menuIcon" class="menu-icon">
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </span>
-            </button>
-            <div class="w-full md:block md:w-auto hidden" id="navbar-default">
-                <ul
-                    class="font-medium flex flex-col  p-4 md:p-0 mt-4 border rounded-sm md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-                    <li>
-                        <a href="#"
-                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-pink-500 md:p-0"
-                            aria-current="page"><i class="bx bx-coin"></i> HOME</a>
+        <nav class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo-container">
+                    <a href="#home" class="nav-logo-image">
+                        <img src="images/logo.png" alt="nav-logo" />
+                    </a>
+
+                    <a href="#home">
+                        <h3 class="orange-text">
+                            MOON MY BALLS
+                        </h3>
+                    </a>
+                </div>
+
+                <ul id="nav-list" class="nav-list-container">
+                    <li class="nav-list-item">
+                        <a href="#roadmap">
+                            Roadmap
+                        </a>
                     </li>
-                    <li>
-                        <a href="#about"
-                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-pink-500 md:p-0"
-                            aria-current="page"><i class="bx bx-coin"></i> ABOUT</a>
+
+                    <li class="nav-list-item">
+                        <a href="#What-the-balls">
+                            What the balls
+                        </a>
                     </li>
-                    <li>
-                        <a href="#tokenomics"
-                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-pink-500 md:p-0"
-                            aria-current="page"><i class="bx bx-coin"></i> TOKENOMICS</a>
+
+                    <li class="nav-list-item">
+                        <a href="#crypto">
+                            Crypto
+                        </a>
                     </li>
-                    <li>
-                        <a href="#partners"
-                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-pink-500 md:p-0  ">
-                            <i class="bx bx-map-alt"></i> PARTNERS</a>
+
+                    <li class="nav-list-item">
+                        <a href="#narratives">
+                            Narratives
+                        </a>
+
                     </li>
-                    <li>
-                        <a href="#social"
-                            class="violet block py-2 px-3 text-white text-lg lg:text-xl rounded hover:text-pink-500 md:hover:bg-transparent md:border-0 md:hover:text-pink-500 md:p-0  ">
-                            <i class="bx bx-message-dots"></i> SOCIALS</a>
+
+                    <li class="nav-list-item">
+                        <a href="#socials">
+                            Socials
+                        </a>
+                    </li>
+
+                    <li class="nav-list-item">
+                        <a href="#tokenomics">
+                            Tokenomics
+                        </a>
+                    </li>
+
+                    <li class="nav-list-item">
+                        <a href="#buy">
+                            Buy
+                        </a>
                     </li>
                 </ul>
-            </div>
 
+                <div class="desktop-only">
+                    <a href="" target=”_blank” class="btn-secondary btn-dark-bg">
+                        Linktree
+                    </a>
+                </div>
 
-            <div class="my-2 md:block md:w-auto hidden" id="navbar-default-btn">
-                <a href="https://t.me/BabyTrumpGlobal" class="">
-                    <button type="button"
-                        class="text-white bg-black hover:bg-white hover:text-black border border-white focus:outline-none focus:ring-4 focus:ring-white font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 ">
-                        Join the community
-                    </button>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <section
-        class="flex flex-wrap justify-center items-center relative text-white text-center py-10 bg-cover bg-center">
-
-        <div
-            class="container min-w-fit hero relative z-10 lg:h-screen flex justify-center flex-col-reverse md:flex-row lg:flex-row items-center mx-5 lg:mx-10 ">
-            <div
-                class="main-head text-white w-full m-0 md:m-10 lg:m-0 md:w-1/3 lg:w-1/2 flex flex-col justify-center items-center gap-10">
-
-                <h1 class="text-3xl text-center lg:text-5xl font-extrabold break-words lg:px-4 mt-6 lg:mt-0">Welcome to
-                    <br>
-                    <span class="text-center text-4xl lg:text-7xl text-cyan-500 glow-text" style="background-image: linear-gradient(to right, cyan, violet);
-                    color: transparent;
-                    -webkit-background-clip: text;
-                    background-clip: text;">Moon My Balls</span>
-                </h1>
-                <a href="https://pancakeswap.finance/swap?outputCurrency=0xbEF1a4b285274B64876f61dB5cCF07E439312D43"
-                    class="w-full md:w-1/2 lg:w-1/2">
-                    <button type="button"
-                        class="text-white flex justify-center gap-x-2 items-center  w-full bg-black hover:bg-white hover:text-black border border-white focus:outline-none focus:ring-4 focus:ring-white font-medium rounded-full text-lg px-5 py-2.5 me-2 mb-2 ">
-                        BUY
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
-                            class="svgg">
-                            <path
-                                d="M6.25 5.44702C5.56 5.44702 5 6.00702 5 6.69702V18.197C5 18.887 5.56 19.447 6.25 19.447H17.75C18.44 19.447 19 18.887 19 18.197V14.447C19 14.1818 19.1054 13.9275 19.2929 13.7399C19.4804 13.5524 19.7348 13.447 20 13.447C20.2652 13.447 20.5196 13.5524 20.7071 13.7399C20.8946 13.9275 21 14.1818 21 14.447V18.197C21 19.059 20.6576 19.8856 20.0481 20.4951C19.4386 21.1046 18.612 21.447 17.75 21.447H6.25C5.38805 21.447 4.5614 21.1046 3.9519 20.4951C3.34241 19.8856 3 19.059 3 18.197V6.69702C3 5.83507 3.34241 5.00842 3.9519 4.39892C4.5614 3.78943 5.38805 3.44702 6.25 3.44702H10C10.2652 3.44702 10.5196 3.55238 10.7071 3.73991C10.8946 3.92745 11 4.18181 11 4.44702C11 4.71224 10.8946 4.96659 10.7071 5.15413C10.5196 5.34166 10.2652 5.44702 10 5.44702H6.25ZM14 5.44702C13.7348 5.44702 13.4804 5.34166 13.2929 5.15413C13.1054 4.96659 13 4.71224 13 4.44702C13 4.18181 13.1054 3.92745 13.2929 3.73991C13.4804 3.55238 13.7348 3.44702 14 3.44702H20C20.2652 3.44702 20.5196 3.55238 20.7071 3.73991C20.8946 3.92745 21 4.18181 21 4.44702V10.447C21 10.7122 20.8946 10.9666 20.7071 11.1541C20.5196 11.3417 20.2652 11.447 20 11.447C19.7348 11.447 19.4804 11.3417 19.2929 11.1541C19.1054 10.9666 19 10.7122 19 10.447V6.86102L14.707 11.154C14.5184 11.3362 14.2658 11.437 14.0036 11.4347C13.7414 11.4324 13.4906 11.3272 13.3052 11.1418C13.1198 10.9564 13.0146 10.7056 13.0123 10.4434C13.01 10.1812 13.1108 9.92862 13.293 9.74002L17.586 5.44702H14Z"
-                                fill="#ffffff"></path>
-                        </svg>
-                    </button>
-                </a>
-                <div class="flex justify-center items-center gap-x-3 mx-auto w-full">
-                    <p class="text-white">CA: </p>
-                    <div id="hs-clipboard-basic" class=" text-white border border-blue-500 rounded-lg w-1/2 md:w-1/2">
-                        <input id="hs-clipboard-input" type="text"
-                            class="py-3 px-4 block rounded-lg text-sm w-full md:w-full placeholder:text-white focus:border-blue-500 focus:ring-blue-500 bg-gray-900 border-gray-700"
-                            value="0xbEF1a4b285274B64876f61dB5cCF07E439312D43">
+                <div class="mobile-only">
+                    <div class="mobile-menu-icon" id="mobile-menu-icon">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
                     </div>
-                    <button type="button"
-                        class="js-clipboard p-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-blue-500 bg-gray-500 text-white shadow-sm hover:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        data-clipboard-target="#hs-clipboard-basic" data-clipboard-action="copy"
-                        data-clipboard-success-text="Copied" onclick="changeCopyText(this)">
-                        <svg class="js-clipboard-default w-4 h-4 group-hover:rotate-6 transition"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                        </svg>
-
-                        <svg class="js-clipboard-success hidden w-4 h-4 text-blue-600"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        <span class="copy-text">copy</span>
-                    </button>
                 </div>
-                <a href="https://app.analytixaudit.com/baby-trump">
-                    <p class="text-xl lg:text-2xl text-white underline">AUDIT</p>
-                </a>
             </div>
-            <div class="main-logo  w-80 md:96 lg:w-1/2 ">
-                <img class="imglogo" src="images/logo1.png" alt="Animated etf logo">
-            </div>
-        </div>
+        </nav>
 
-        <!-- <div class="chart z-10 w-full flex flex-col justify-center items-center ">
+        <div class="top-page-space"></div>
 
-            <div class="flex justify-center items-center gap-x-3 w-full md:w-1/2 mx-10 px-5">
-                <p class="text-white">CA: </p>
-                <div id="hs-clipboard-basic" class=" text-white border border-blue-500 rounded-lg w-full ">
-                    <input id="hs-clipboard-input" type="text"
-                        class="py-3 px-4 block rounded-lg text-sm w-full md:w-full placeholder:text-white focus:border-blue-500 focus:ring-blue-500 bg-gray-900 border-gray-700"
-                        value="AD9tBNeJKxEDVNUBtKp3dTPjbYjt68XiDEZtM7WCpxGz">
+        <section class="section-container mobile-home-bg" id="home">
+            <div class="section-content mobile-home-content">
+                <div class="desktop-home-title">
+                    <h1 class="white-text">
+                        BITCOIN IS THE FUTURE
+                        <br>NOT 'CRYPTO'. <span class="orange-text">MOON MY BALLS</span>
+                        <br>IS HERE TO REPRESENT THAT
+                    </h1>
                 </div>
-                <button type="button"
-                    class="js-clipboard p-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-blue-500 bg-gray-500 text-white shadow-sm hover:bg-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                    data-clipboard-target="#hs-clipboard-basic" data-clipboard-action="copy"
-                    data-clipboard-success-text="Copied" onclick="changeCopyText(this)">
-                    <svg class="js-clipboard-default w-4 h-4 group-hover:rotate-6 transition"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                    </svg>
 
-                    <svg class="js-clipboard-success hidden w-4 h-4 text-blue-600" xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span class="copy-text">copy</span>
-                </button>
-            </div>
+                <div class="home-image-container">
+                    <div class="home-image-responsive">
+                        <img class="home-image" src="images/symbol.png" alt="home" />
 
-            <div class="w-full flex justify-center mt-5">
-                <button type="button"
-                    class="btn-buy flex flex-wrap justify-center h-16 w-64 md:w-96 items-center transform rounded-full hover:scale-x-110 hover:scale-y-110 transition duration-300 ease-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        style="fill: rgba(255, 255, 255, 1)">
-                        <path d="M3 3v17a1 1 0 0 0 1 1h17v-2H5V3H3z"></path>
-                        <path
-                            d="M15.293 14.707a.999.999 0 0 0 1.414 0l5-5-1.414-1.414L16 12.586l-2.293-2.293a.999.999 0 0 0-1.414 0l-5 5 1.414 1.414L13 12.414l2.293 2.293z">
-                        </path>
-                    </svg>
-                    <a href="https://dexscreener.com/solana/btzr6j7nvywnadvrktaf5yc5xohezxwpm9ldfsesfhhn"
-                        class="text-white text-xl font-extrabold mx-5 ">
-                        CHART</a>
-                </button>
-            </div>
-
-        </div> -->
-
-    </section>
-
-    <!-- about section -->
-    <section id="about" class="shadow-2xl py-16">
-        <div class="flex flex-col items-center justify-center mx-5 lg:mx-20 gap-5">
-            <p class="text-4xl lg:text-5xl font-extrabold text-center text-white ">Introducing <br> Superman</p>
-            <div class="hero lg:h-screen flex flex-col-reverse justify-between lg:flex-row items-center mx-5 lg:mx-10">
-                <div class="main-logo about-logo w-fill lg:w-1/3 rounded-full mt-8">
-                    <img src="images/logo.png" alt="Animated" />
+                        <div class="mobile-only">
+                            <div class="mobile-home-title">
+                                <span class="white-text">
+                                    BITCOIN
+                                    <br>IS THE FUTURE
+                                    <br>NOT 'CRYPTO'
+                                </span>
+                                <h3>
+                                    <span class="orange-text">MOON MY BALLS</span>
+                                    <br>IS HERE TO REPRESENT THAT
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="main-head text-white w-full lg:w-1/2 flex flex-col ">
-                    <div class="flex flex-col lg:flex-row items-center justify-center ">
-                        <p
-                            class="about-context about-text text-gray-300 mx-2 md:mx-12 text-left md:text-left md:text-xl lg:text-2xl mt-5  flex flex-col">
-                            <span>
-                                MoonMyBalls - the world's first decentralized, AI-powered, Lightning Network-integrated, Telegram-compatible, Bitcoin-fueled,
-                                buzzword-as-a-service platform! Our advanced AI algorithms leverage the power of blockchain technology to seamlessly 
-                                sync with your Telegram chats and deliver a never-ending stream of the trendiest tech jargon straight to your device. 
-                                Simply send a few satoshis via the Lightning Network and watch the cutting-edge buzzwords flow!
-                            </span>
+
+                <div class="home-btns-container">
+                    <a class="btn-primary btn-dark-bg" href="#buy">
+                        BUY NOW
+                    </a>
+
+                    <div class="mobile-only">
+                        <a class="btn-primary btn-light-bg" href="#">
+                            LINK TREE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="roadmap">
+            <div class="section-content">
+                <div class="roadmap-title white-text">
+                    <span class="desktop-only">
+                        THE TOKEN REPRESENT <span class="orange-text">PROTEST</span> ON SHITCOINS AND
+                        <br>WISHES TO <span class="orange-text">RAISE AWARENESS</span> TO EVENTUALLY
+                        <br><span class="orange-text">BECOME AN ALT OVER-VALUATION INDEX</span>
+                    </span>
+
+                    <span class="mobile-only">
+                        THE TOKEN REPRESENT <span class="orange-text">PROTEST</span> ON
+                        <br>SHITCOINS AND WISHES TO <span class="orange-text">RAISE
+                            <br>AWARENESS</span> TO EVENTUALLY<span class="orange-text"> BECOME
+                            <br>AN ALT OVER-VALUATION INDEX</span>
+                    </span>
+                </div>
+
+                <div class="roadmap-grid-container">
+                    <div class="grid-item">
+                        <div class="grid-item-text">
+                            <h5 class="white-text desktop-only">
+                                Founding the community,
+                                <br>assigning roles & publishing
+                                <br>content (mainly on runes)
+                            </h5>
+
+                            <h5 class="white-text mobile-only">
+                                Founding the community,
+                                <br>assigning roles &
+                                <br>publishing content (mainly
+                                <br>on runes)
+                            </h5>
+                        </div>
+
+                        <div class="grid-item-line">
+                            <img src="images/nums/grid-seperator.jpg" alt="grid-seperator" />
+                        </div>
+
+                        <div class="grid-item-image">
+                            <img src="images/nums/one.png" alt="one" />
+                        </div>
+
+                        <div class="grid-item-space"></div>
+                    </div>
+
+                    <div class="grid-item reverse-grid-item">
+                        <div class="grid-item-text">
+                            <h5 class="white-text">
+                                Taking over
+                                <br class="desktop-only">the runes
+                                <br class="desktop-only">market
+                            </h5>
+                        </div>
+
+                        <div class="grid-item-line">
+                            <img src="images/nums/grid-seperator.jpg" alt="grid-seperator" />
+                        </div>
+
+                        <div class="grid-item-image">
+                            <img src="images/nums/two.png" alt="two" />
+                        </div>
+
+                        <div class="grid-item-space"></div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="grid-item-text">
+                            <h5 class="white-text desktop-only">
+                                Expanding the content to
+                                <br>alts, memes, nft's,
+                                <br>launches, stables, ico's, etc.
+                            </h5>
+
+                            <h5 class="white-text mobile-only">
+                                Expanding the content to
+                                <br>alts, memes, nft's, launches,
+                                <br>stables, ico's, etc.
+                            </h5>
+                        </div>
+
+                        <div class="grid-item-line">
+                            <img src="images/nums/grid-seperator.jpg" alt="grid-seperator" />
+                        </div>
+
+                        <div class="grid-item-image">
+                            <img src="images/nums/three.png" alt="three" />
+                        </div>
+
+                        <div class="grid-item-space"></div>
+                    </div>
+
+                    <div class="grid-item reverse-grid-item">
+                        <div class="grid-item-text">
+                            <h5 class="white-text">
+                                Teaching Bitcoin basics and
+                                <br>principles of investing and
+                                <br>why not trading
+                            </h5>
+                        </div>
+
+                        <div class="grid-item-line">
+                            <img src="images/nums/grid-seperator.jpg" alt="grid-seperator" />
+                        </div>
+
+                        <div class="grid-item-image">
+                            <img src="images/nums/four.png" alt="four" />
+                        </div>
+
+                        <div class="grid-item-space"></div>
+                    </div>
+
+                    <div class="grid-item">
+                        <div class="grid-item-text">
+                            <h5 class="white-text">
+                                Becoming an influential
+                                <br>alts-exposing, pro-
+                                <br>bitcoin media hub
+                            </h5>
+                        </div>
+
+                        <div class="grid-item-line">
+                            <img src="images/nums/grid-seperator.jpg" alt="grid-seperator" />
+                        </div>
+
+                        <div class="grid-item-image">
+                            <img src="images/nums/five.png" alt="five" />
+                        </div>
+
+                        <div class="grid-item-space"></div>
+                    </div>
+
+                    <div class="grid-item reverse-grid-item">
+                        <div class="grid-item-text">
+                            <h5 class="white-text desktop-only">
+                                Evolving into an alts
+                                <br>over-valuation index, a
+                                <br>shitcoin protesting tool
+                            </h5>
+
+                            <h5 class="white-text mobile-only">
+                                Evolving into an alts over-
+                                <br>valuation index, a shitcoin
+                                <br>protesting tool
+                            </h5>
+                        </div>
+
+                        <div class="grid-item-line">
+                            <img src="images/nums/grid-seperator.jpg" alt="grid-seperator" />
+                        </div>
+
+                        <div class="grid-item-image">
+                            <img src="images/nums/six.png" alt="six" />
+                        </div>
+
+                        <div class="grid-item-space"></div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section-container white-bg" id="What-the-balls">
+            <div class="section-content">
+                <div class="article-container">
+                    <h1>WHAT THE BALLS?</h1>
+
+                    <div class="inline-wrapper">
+                        <h2>
+                            THE PROMISE OF BITCOIN<span class="desktop-only"> IS DISAPPEARING</span>
+                        </h2>
+
+                        <p>
+                            <span class="mobile-only">is disappearing </span>
+                            within the ‘crypto space’, a casino with exchanges, fairytales on “next level tech” and
+                            infinite tokens launches.
+                        </p>
+                    </div>
+
+                    <div class="inline-wrapper">
+                        <h2>
+                            THE INVENTION OF DECENTRALIZED, FREE MONEY
+                        </h2>
+
+                        <p>
+                            that can
+                            change the relationship between citizens and governments - became a
+                            boring investment, a model for copycats.
+                        </p>
+                    </div>
+
+                    <div class="inline-wrapper">
+                        <h2>
+                            People looking for their 10X
+                        </h2>
+
+                        <p>
+                            totally clueless of bitcoin
+                            fundamentals, unaware that bitcoin will dominate all sectors.
+                        </p>
+                    </div>
+
+                    <div class="inline-wrapper">
+                        <h2>
+                            MOON MY BALLS
+                        </h2>
+
+                        <p>
+                            mission is to cut the crap, move people from Alt
+                            Season to Bitcoin Season, pump BTC dominance, expose the moon as balls.
+                        </p>
+                    </div>
+
+                    <p>
+                        We want to create a wise community to flood the space. Turn the market
+                        around. BTC is the answer.
+                    </p>
+                </div>
+
+                <div class="wtb-image">
+                    <img src="images/wtb.png" alt="What-the-balls" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="crypto">
+            <div class="section-content">
+                <div class="article-container white-text crypto">
+                    <h1>CRYPTO</h1>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            Everything is useless, yet everyone is looking for gains
+                        </h2>
+                        <p>
+                            Infinite launches on Uniswap & SOL, Ordinals on Bitcoin, on Doge, memes
+                            on Telegram, stable scams, forks, glitches, gaming, tokens copied with the
+                            exact same code.
+                        </p>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            Jokes worth BILLIONS: Pepe, Wif, Bonk, Floky
+                        </h2>
+                        <p>
+                            memes pre-sales in the hundreds of millions, meme generators, tokens
+                            with names like “Shiba 3.0” and “Pepe with a hat”.
+                        </p>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            ‘Serious Projects’
+                        </h2>
+
+                        <p>
+                            ETH promised a 'distributed computer', what is it used for? Creating more
+                            coins. Binance pleaded guilty and is still accused of using customer funds.
+                            What’s their 80 billion dollar token used for?
+                        </p>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            Categories like contracts, NFT and Metavers
+                        </h2>
+
+                        <p>
+                            are equivalent to state
+                            budgets. Governments could pay off their national debt with a silly meme
+                            and a few influencers.
+                        </p>
+                    </div>
+
+                    <h2>
+                        Why even open a business?
+                        <br>There is no competition for this market
+                    </h2>
+                </div>
+
+                <div class="crypto-image">
+                    <img src="images/crypto.png" alt="crypto" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container white-bg" id="narratives">
+            <div class="section-content">
+                <div class="article-container article-narratives">
+                    <h1>NARRATIVES</h1>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            Market opinion on alt pricing
+                        </h2>
+                        <p>
+                            The alternative market is shit and is not priced as such.
+                            Bitcoin is the only asset undervalued. It's time for a Bitcoin Season
+                        </p>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            Awareness & Education
+                        </h2>
+                        <p>
+                            Bitcoin VS Alts, Bitcoin Basics, Investment and Risk Management.
+                            MoonMyBalls wishes To prove the current market is a joke
+                        </p>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            New Narrative
+                        </h2>
+                        <p>
+                            The market is full of copies of copies. People buy a token for a reason,
+                            narrative. Token that comes to represent this, is a new idea
+                        </p>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            Moral Token
+                        </h2>
+                        <p>
+                            No legends mixed with spectacular buzzwords, this is the story.
+                            SImple & clear vision. <span class="orange-text">Bitcoin is better, buy Bitcoin</span>
+                        </p>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h2>
+                            Solid Community
+                        </h2>
+                        <p>
+                            Content creator community. Free mint, NO pre-mine. Holding to protest
+                            ‘Shitcoins market’ with economic share
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Tokenomics Section -->
-    <section id="tokenomics" class=" text-white py-16">
-        <div class="container mx-auto text-center">
-            <div class="token1 flex flex-col-reverse md:flex-row md:items-center justify-start mx-4 md:mx-6 lg:mx-8">
-                <h1 class="token text-5xl lg:text-7xl font-extrabold mb-8 text-white ">Tokenomics</h1>
-                <img class="w-32 md:w-42 lg:w-64 px-5" src="images/tok.svg" alt="">
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 m-10 align-middle ">
-                <!-- Total Supply -->
-                <div class="token1 p-6 border-4 border-white rounded-lg shadow-2xl">
-                    <h1 class="text-3xl font-bold mb-4 text-white">Total Supply</h1>
-                    <p class="tok pt-5">42B Moon My Balls </p>
-                </div>
-                <!-- Initial Liquidity -->
-                <div class="token2 p-6 border-4 border-white rounded-lg shadow-md">
-                    <h1 class="text-3xl font-bold mb-4 text-white">Tax</h1>
-                    <p class="tok   pt-5">0%</p>
-                </div>
-                <!-- addd -->
-                <div class="token3 p-6 border-4 border-white rounded-lg shadow-md">
-                    <h1 class="text-3xl font-bold mb-4 text-white">Contract</h1>
-
-                    <div class="flex justify-center items-center w-full gap-x-3">
-
-                        <div id="hs-clipboard-basic" class=" text-white border  rounded-lg w-full ">
-                            <input id="hs-clipboard-input" type="text"
-                                class="py-3 px-4 block rounded-lg text-sm w-full md:w-full placeholder:text-white  bg-black"
-                                value="0xbEF1a4b285274B64876f61dB5cCF07E439312D43">
-                        </div>
-                        <button type="button"
-                            class="js-clipboard p-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border text-white shadow-sm disabled:opacity-50 disabled:pointer-events-none "
-                            data-clipboard-target="#hs-clipboard-basic" data-clipboard-action="copy"
-                            data-clipboard-success-text="Copied" onclick="changeCopyText(this)">
-                            <svg class="js-clipboard-default w-4 h-4 group-hover:rotate-6 transition"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                            </svg>
-
-                            <svg class="js-clipboard-success hidden w-4 h-4 text-blue-600"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- partners section -->
-    <section id="partners">
-        <div class="container mx-auto text-center p-5 lg:pb-20">
-            <div
-                class="token1 flex flex-col-reverse md:flex-row items-center justify-center lg:justify-start mx-4 md:mx-6 lg:mx-8">
-                <h1 class="token text-5xl lg:text-7xl font-extrabold mb-8 text-white ">Partners</h1>
-                <img class="w-32 md:w-42 lg:w-64 px-5" src="images/partner.png" alt="">
-            </div>
-
-            <div
-                class="flex flex-col lg:flex-row justify-center items-center align-middle mb-5 md:mb-10 lg:mb-20 mt-5 lg:mt-20 ">
-
-                <a href="https://www.pinksale.finance/">
-                    <div class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8">
-                        <div
-                            class="flex flex-col justify-center items-center border-4 rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
-                            <div class="flex justify-center items-center">
-                                <img class="w-32 lg:w-64 " src="images/partners/pink.png" alt="">
-                            </div>
-                            <div class="flex justify-center items-center">
-                                <p class="text-3xl lg:text-7xl text-white">Freedom</p>
-                            </div>
-                        </div>
-                    </div>
+                <a href="https://x.com/moon_my_balls" target=”_blank” class="btn-primary btn-light-bg">
+                    Read More
                 </a>
-                <a href="https://www.dexview.com/">
-                    <div
-                        class="token1 w-64 h-64 flex items-center lg:w-1/3 mx-4 md:mx-6 lg:mx-8 mb-8 transform hover:scale-110 transition duration-200">
-                        <div
-                            class="flex flex-col justify-center items-center border-4 rounded-lg m-4 lg:m-10 p-10 transform hover:scale-110 transition duration-200">
-                            <div class="flex justify-center items-center">
-                                <img class="w-32 lg:w-64 " src="images/partners/dex.png" alt="">
+
+                <div class="narratives-image">
+                    <img src="images/narratives.png" alt="narratives" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="socials">
+            <div class="section-content section-links">
+                <div class="links-title">
+                    <h1 class="orange-text">
+                        SOCIALS
+                    </h1>
+
+                    <h4 class="white-text">
+                        We're a community media hub.
+                        <br class="mobile-only">We Publish media all the time.
+                    </h4>
+                </div>
+
+                <div class="icons-container">
+                    <div class="icon-container">
+                        <a href="https://x.com/moon_my_balls" target=”_blank”>
+                            <div class="svg-contrast-icon">
+                                <svg viewBox="23 10 110 110" fill="none">
+                                    <g id="Property 1=Component 6" filter="url(#filter0_d_249_530)">
+                                        <path id="Vector"
+                                            d="M48 36H55.2727L98.9091 93H91.6364L48 36ZM61.0909 36H68.3636L112 93H104.727L61.0909 36ZM53.8182 36H68.3636V41.7H53.8182V36ZM91.6364 87.3H106.182V93H91.6364V87.3ZM98.9091 36H109.091L59.6364 93H49.4545L98.9091 36Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
                             </div>
-                            <div class="flex justify-center items-center">
-                                <p class="text-3xl lg:text-7xl text-white">Value</p>
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="https://t.me/MoonMyBalls" target=”_blank”>
+                            <div class="svg-icon">
+                                <svg viewBox="-22 -22 110 110" fill="none">
+                                    <g id="logos:telegram" clip-path="url(#clip0_249_543)">
+                                        <path id="Vector"
+                                            d="M33 0C24.2498 0 15.8503 3.47892 9.66797 9.66539C3.47925 15.8543 0.0017143 24.2477 0 33C0 41.7486 3.48047 50.1481 9.66797 56.3346C15.8503 62.5211 24.2498 66 33 66C41.7502 66 50.1497 62.5211 56.332 56.3346C62.5195 50.1481 66 41.7486 66 33C66 24.2514 62.5195 15.8519 56.332 9.66539C50.1497 3.47892 41.7502 0 33 0Z"
+                                            fill="#229ED9" />
+                                        <path id="Vector_2"
+                                            d="M14.9376 32.6514C24.5591 28.4604 30.9735 25.6971 34.1807 24.3622C43.3485 20.5502 45.2512 19.8881 46.4938 19.8657C46.7671 19.8613 47.3755 19.9288 47.7726 20.2498C48.1026 20.5205 48.1954 20.8866 48.2418 21.1437C48.283 21.4004 48.3398 21.9857 48.2934 22.4425C47.7984 27.6606 45.6482 40.3234 44.5551 46.168C44.0962 48.6409 43.1835 49.47 42.3018 49.551C40.3837 49.7273 38.9296 48.2846 37.0734 47.0682C34.1704 45.164 32.5307 43.9791 29.7102 42.1213C26.4515 39.9743 28.5655 38.794 30.4218 36.8656C30.9065 36.3608 39.3524 28.6805 39.5123 27.9839C39.5329 27.8968 39.5535 27.5719 39.3576 27.4008C39.1668 27.2291 38.8832 27.2878 38.6769 27.3342C38.383 27.4002 33.7476 30.4672 24.7551 36.5345C23.4402 37.4389 22.2491 37.8798 21.1766 37.8566C20.001 37.8313 17.7323 37.1904 16.0462 36.6428C13.9837 35.971 12.3388 35.6157 12.4832 34.4746C12.5554 33.8806 13.3752 33.2727 14.9376 32.6514Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
                             </div>
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="https://medium.com/@moonmyballs" target=”_blank”>
+                            <div class="svg-contrast-icon">
+                                <svg viewBox="-23 -20 110 110" fill="none">
+                                    <g id="fa-brands:medium-m">
+                                        <path id="Vector"
+                                            d="M9.21689 18.3434C9.29424 17.5828 8.99775 16.8223 8.43057 16.3066L2.61689 9.29414V8.25H20.6896L34.663 38.891L46.9478 8.25H64.1825V9.29414L59.2067 14.0637C58.7813 14.3859 58.5622 14.9273 58.6524 15.4559V50.5184C58.5622 51.0469 58.7813 51.5883 59.2067 51.9105L64.0665 56.6801V57.7242H39.613V56.6801L44.6532 51.7945C45.1431 51.3047 45.1431 51.15 45.1431 50.4023V22.0687L31.131 57.634H29.236L12.9423 22.0687V45.9035C12.8005 46.909 13.1356 47.9145 13.8446 48.6363L20.3931 56.577V57.6211H1.83057V56.5898L8.379 48.6363C9.0751 47.9145 9.39736 46.8961 9.21689 45.9035V18.3434Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="https://m.youtube.com/@moonmyballs" target=”_blank”>
+                            <div class="svg-icon">
+                                <svg viewBox="-26 -35 123 86" fill="none">
+                                    <g id="logos:youtube-icon" clip-path="url(#clip0_249_557)">
+                                        <path id="Vector"
+                                            d="M72.3646 8.11056C71.9402 6.54292 71.1122 5.11375 69.9632 3.96537C68.8143 2.81699 67.3843 1.98947 65.8158 1.5652C60.0735 0 36.9626 0 36.9626 0C36.9626 0 13.8506 0.0473777 8.10828 1.61258C6.53974 2.03687 5.10978 2.86444 3.9608 4.01287C2.81181 5.1613 1.9839 6.59053 1.55951 8.15822C-0.177403 18.3554 -0.851184 33.8936 1.60721 43.6829C2.03164 45.2505 2.85957 46.6797 4.00855 47.8281C5.15753 48.9765 6.58747 49.804 8.15597 50.2282C13.8983 51.7934 37.0098 51.7934 37.0098 51.7934C37.0098 51.7934 60.1209 51.7934 65.8629 50.2282C67.4315 49.804 68.8615 48.9765 70.0105 47.8281C71.1596 46.6798 71.9875 45.2506 72.412 43.6829C74.244 33.4712 74.8085 17.9426 72.3646 8.11056Z"
+                                            fill="#FF0000" />
+                                        <path id="Vector_2"
+                                            d="M29.6064 36.9952L48.7787 25.8966L29.6064 14.7981V36.9952Z"
+                                            fill="currentColor" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="https://discord.gg/V3z4hZxz" target=”_blank”>
+                            <div class="svg-icon">
+                                <svg viewBox="-20 -28 121 94" fill="none">
+                                    <g id="logos:discord-icon" clip-path="url(#clip0_249_564)">
+                                        <path id="Vector"
+                                            d="M68.6146 5.17092C63.3025 2.72355 57.6828 0.984584 51.9039 0C51.1841 1.28144 50.3431 3.00497 49.7631 4.37614C43.5324 3.45362 37.359 3.45362 31.2429 4.37614C30.6632 3.00529 29.8032 1.28144 29.0768 0C23.2922 0.985038 17.6677 2.72843 12.3531 5.1837C1.77755 20.9202 -1.08941 36.2653 0.343912 51.3933C7.35832 56.5512 14.156 59.6845 20.8391 61.7349C22.5 59.4858 23.9683 57.1047 25.2286 54.6161C22.8291 53.7166 20.5158 52.608 18.3164 51.3036C18.8952 50.8812 19.4604 50.4409 20.0111 49.9835C33.3388 56.1218 47.82 56.1218 60.9889 49.9835C61.542 50.4379 62.1069 50.8781 62.6832 51.3036C60.4803 52.6114 58.1627 53.7222 55.7583 54.6226C57.0259 57.1213 58.4915 59.5047 60.1479 61.7411C66.8373 59.691 73.6413 56.5577 80.6557 51.3933C82.3377 33.8564 77.7828 18.652 68.6146 5.17092ZM27.0445 42.0899C23.0435 42.0899 19.7624 38.412 19.7624 33.9333C19.7624 29.4547 22.9736 25.7705 27.0445 25.7705C31.1157 25.7705 34.3965 29.4481 34.3266 33.9333C34.3329 38.412 31.1157 42.0899 27.0445 42.0899ZM53.9551 42.0899C49.9542 42.0899 46.6734 38.412 46.6734 33.9333C46.6734 29.4547 49.8843 25.7705 53.9551 25.7705C58.0263 25.7705 61.3072 29.4481 61.2372 33.9333C61.2372 38.412 58.0263 42.0899 53.9551 42.0899Z"
+                                            fill="#5865F2" />
+                                    </g>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="https://www.facebook.com/people/Moon-My-Balls/61564057067986/" target=”_blank”>
+                            <div class="svg-icon">
+                                <svg viewBox="-15 -15 70 70">
+                                    <style type="text/css">
+                                        .st0 {
+                                            fill: url(#SVGID_1_);
+                                        }
+
+                                        .st1 {
+                                            fill: currentColor;
+                                        }
+                                    </style>
+                                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-277.375"
+                                        y1="406.6018" x2="-277.375" y2="407.5726"
+                                        gradientTransform="matrix(40 0 0 -39.7778 11115.001 16212.334)">
+                                        <stop offset="0" style="stop-color:#0062E0" />
+                                        <stop offset="1" style="stop-color:#19AFFF" />
+                                    </linearGradient>
+                                    <path class="st0"
+                                        d="M16.7,39.8C7.2,38.1,0,29.9,0,20C0,9,9,0,20,0s20,9,20,20c0,9.9-7.2,18.1-16.7,19.8l-1.1-0.9h-4.4L16.7,39.8z" />
+                                    <path class="st1" d="M27.8,25.6l0.9-5.6h-5.3v-3.9c0-1.6,0.6-2.8,3-2.8h2.6V8.2c-1.4-0.2-3-0.4-4.4-0.4c-4.6,0-7.8,2.8-7.8,7.8V20
+	h-5v5.6h5v14.1c1.1,0.2,2.2,0.3,3.3,0.3c1.1,0,2.2-0.1,3.3-0.3V25.6H27.8z" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section-container" id="tokenomics">
+            <div class="section-content section-links">
+                <div class="links-title">
+                    <h1 class="orange-text">
+                        TOKENOMICS
+                    </h1>
+
+                    <h4 class="white-text">
+                        Supply 1 million free mint, no pre-mine Fair Lunch
+                    </h4>
+                </div>
+
+                <div class="icons-container">
+                    <div class="icon-container">
+                        <a href="" target=”_blank”>
+                            <div class="png-icon">
+                                <img src="images/icons/icon-ord.png" alt="ord" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="icons-container">
+                        <div class="icon-container">
+                            <a href="" target=”_blank”>
+                                <div class="png-icon">
+                                    <img src="images/icons/icon-geniidata.png" alt="geniidata" />
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- social section -->
-    <section id="social">
-        <div class="flex flex-col-reverse items-center md:flex-row justify-between gap-5 ">
-            <div class="social w-full md:w-1/2 mx-4 px-4 flex justify-center items-center">
-                <img class="w-80 md:96 lg:w-[1000px] mx-8" src="images/logo1.png" alt="">
-            </div>
+                    <div class="icons-container">
+                        <div class="icon-container">
+                            <a href="" target=”_blank”>
+                                <div class="png-icon">
+                                    <img src="images/icons/icon-ordiscan.png" alt="ordiscan" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-            <div class="social w-full md:w-1/2 mx-4 px-4">
-                <h1 class="text-center md:text-left text-3xl lg:text-5xl font-extrabold mb-8 text-white ">Follow
-                    Moon My Balls on social media with Love</h1>
-                <div class="flex items-center justify-center md:justify-start gap-4 ">
-                    <a href="https://t.me/BabyTrumpGlobal">
-                        <img class="w-24 transform hover:scale-110 transition duration-200" src="images/social_tg.png"
-                            alt="">
-                    </a>
-                    <a href="https://twitter.com/BabyTrumpBSC_">
-                        <img class="w-24 transform hover:scale-110 transition duration-200" src="images/social_x.png"
-                            alt="">
-                    </a>
-                    <a href="">
-                        <img class="w-24 transform hover:scale-110 transition duration-200"
-                            src="images/social_discord.png" alt="">
-                    </a>
-                    
+                    <div class="icons-container">
+                        <div class="icon-container">
+                            <a href="" target=”_blank”>
+                                <div class="png-icon">
+                                    <img src="images/icons/icon-luminex.png" alt="luminex" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-4 text-center mt-10">
-        <div class="container mx-auto">
-            <!-- Disclaimer, social media icons, copyright here -->
-            <p class="text-sm text-white">Copyright Moon My Balls © 2024. All rights reserved</p>
-        </div>
-    </footer>
+        <section class="section-container" id="buy">
+            <div class="section-content section-links">
+                <div class="links-title">
+                    <h1 class="orange-text">
+                        BUY
+                    </h1>
 
+                    <h4 class="white-text">
+                        Token is on bitcoin runes protocol <a href="" target=”_blank” class="inline-link">simple how to ></a>
+                    </h4>
+                </div>
+
+                <div class="icons-container">
+                    <div class="icon-container">
+                        <a href="" target=”_blank”>
+                            <div class="png-icon">
+                                <img src="images/icons/icon-magic-eden.png" alt="magic-eden" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="" target=”_blank”>
+                            <div class="png-icon">
+                                <img src="images/icons/icon-unisat.png" alt="unisat" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="icon-container">
+                        <a href="" target=”_blank”>
+                            <div class="png-icon">
+                                <img src="images/icons/icon-okx.png" alt="okx" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container" id="footer">
+            <div class="section-content footer">
+                <div class="footer-content">
+                    <a href="#home" class="footer-image">
+                        <img src="images/logo.png" alt="footer-logo" />
+                    </a>
+
+                    <a href="#home">
+                        <h3 class="orange-text">MOON MY BALLS</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const mobileMenuIcon = document.getElementById("mobile-menu-icon")
+        const navList = document.getElementById("nav-list")
+
+        mobileMenuIcon.addEventListener("click", openMobileMenu)
+
+        function openMobileMenu(e) {
+            event.stopPropagation()
+
+            mobileMenuIcon.removeEventListener("click", openMobileMenu)
+
+            navList.classList.add("show-mobile-menu")
+            document.addEventListener("click", handleMobileMenu)
+
+            return
+        }
+
+        function handleMobileMenu(e) {
+            event.stopPropagation()
+
+            document.removeEventListener("click", handleMobileMenu)
+            navList.classList.remove("show-mobile-menu")
+
+            mobileMenuIcon.addEventListener("click", openMobileMenu)
+
+            if (navList.contains(e.target)) e.target.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+
+            return
+        }
+
+    </script>
 </body>
-
-<script>
-
-    ScrollReveal().reveal(".social", { delay: 100, reset: true, origin: 'right', distance: '20px', duration: 300 });
-
-    ScrollReveal().reveal(".token3", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 500 });
-    ScrollReveal().reveal(".token2", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 500 });
-    ScrollReveal().reveal(".token1", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 500 });
-
-    ScrollReveal().reveal(".chart", { delay: 100, reset: true, origin: 'bottom', distance: '500px', duration: 300 });
-    ScrollReveal().reveal(".main-head", { delay: 100, reset: true, origin: 'left', distance: '500px', duration: 300 });
-    ScrollReveal().reveal(".main-logo", { delay: 100, reset: true, origin: 'right', distance: '500px', duration: 300 });
-    ScrollReveal().reveal(".nav-main", { delay: 100, reset: true, origin: 'top', distance: '20px', duration: 300 });
-
-    // button menu nav
-    function toggleMenu() {
-        var icon = document.getElementById("menuIcon");
-        var navbar = document.getElementById("navbar-default");
-
-        if (navbar.style.display === 'none' || navbar.style.display === '') {
-            icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: cyan;"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>';
-            navbar.style.display = 'block';
-        } else {
-            icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: cyan;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>';
-            navbar.style.display = 'none';
-        }
-    }
-
-    function changeCopyText(button) {
-        var copyTextElement = button.querySelector('.copy-text');
-        if (copyTextElement) {
-            copyTextElement.textContent = 'copied';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var clipboard = new ClipboardJS('.js-clipboard');
-    });
-
-
-    const menuIcon = document.querySelector('#menu-icon');
-    const navbar = document.querySelector('.navbar');
-    const navbg = document.querySelector('.nav-bg');
-    menuIcon.addEventListener('click', () => {
-        menuIcon.classList.toggle('bx-x');
-        navbar.classList.toggle('active');
-        navbg.classList.toggle('active');
-    });
-</script>
 
 </html>
