@@ -397,7 +397,7 @@ img {
 
 .top-page-space {
     @media only screen and (min-width : 1224px) {
-        height: 120px;
+        height: 180px;
     }
 }
 
@@ -411,14 +411,14 @@ img {
         flex-direction: column;
         align-items: center;
         width: 84vw;
-        padding: 140px 0;
+        padding: 100px 0;
 
         @media only screen and (min-width : 1224px) {
             display: block;
             left: 50%;
             width: 1000px;
             margin-left: -500px;
-            padding: 175px 0 100px 0;
+            padding: 110px 0 100px 0;
         }
     }
 
@@ -491,9 +491,9 @@ img {
         @media only screen and (min-width : 1224px) {
             position: absolute;
             right: -50px;
-            top: 100px;
-            width: 400px;
-            height: 400px;
+            top: 0;
+            width: 500px;
+            height: 500px;
             mix-blend-mode: lighten;
         }
 
@@ -526,6 +526,10 @@ img {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        
+        @media only screen and (min-width : 1224px) {
+            padding-bottom: 100px;
+        }
     }
 
     & .mobile-home-content {
@@ -582,15 +586,6 @@ img {
             }
         }
     }
-
-    .roadmap-footer {
-        padding-top: 50px;
-
-        @media only screen and (min-width : 1224px) {
-            padding-top: 100px;
-        }
-    }
-
 
     & .roadmap-grid-container {
         display: flex;
@@ -681,6 +676,16 @@ img {
         }
 
         ;
+    }
+
+    .roadmap-footer {
+        padding-top: 50px;
+        padding-bottom: 0;
+
+        @media only screen and (min-width : 1224px) {
+            padding-top: 100px;
+            padding-bottom: 0;
+        }
     }
 
 
