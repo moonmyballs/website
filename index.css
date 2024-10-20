@@ -240,14 +240,14 @@ img {
     position: fixed;
     width: 100vw;
     height: 60px;
-    padding-top: 59px;
+    padding-top: 20px;
     background: rgba(26, 25, 25, 0.67);
     backdrop-filter: blur(6.8px);
     z-index: 999;
 
     @media only screen and (min-width : 1224px) {
-        height: 100px;
-        padding-top: 22px;
+        height: 80px;
+        padding-top: 10px;
         background: rgba(34, 34, 34, 0.67);
     }
 
@@ -305,6 +305,7 @@ img {
                 align-items: center;
                 justify-content: space-between;
                 position: static;
+                overflow-y: unset;
                 right: 0;
                 top: 0;
                 width: 650px;
@@ -559,12 +560,13 @@ img {
 
     /* #2 ROADMAP */
 
-    & .roadmap-title {
+    & .roadmap-title,
+    .roadmap-footer {
         padding-bottom: 80px;
         text-align: center;
 
         @media only screen and (min-width : 1224px) {
-            padding-bottom: 200px;
+            padding-bottom: 100px;
         }
 
         & span {
@@ -578,6 +580,14 @@ img {
                 font-weight: 400;
                 line-height: 45px;
             }
+        }
+    }
+
+    .roadmap-footer {
+        padding-top: 50px;
+
+        @media only screen and (min-width : 1224px) {
+            padding-top: 100px;
         }
     }
 
@@ -705,7 +715,7 @@ img {
         @media only screen and (min-width : 1224px) {
             display: block;
             position: absolute;
-            top: 430px;
+            top: 320px;
             left: -100px;
             width: 360px;
             height: 500px;
