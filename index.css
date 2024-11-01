@@ -697,7 +697,7 @@ img {
         @media only screen and (min-width : 1224px) {
             display: block;
             position: absolute;
-            top: 340px;
+            top: 225px;
             right: -30px;
             width: 380px;
             height: 380px;
@@ -720,7 +720,7 @@ img {
         @media only screen and (min-width : 1224px) {
             display: block;
             position: absolute;
-            top: 320px;
+            top: 265px;
             left: -100px;
             width: 360px;
             height: 500px;
