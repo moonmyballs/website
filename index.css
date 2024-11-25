@@ -3,7 +3,10 @@
     margin: 0;
 }
 
+
 /* todo - add colors */
+/* COLORS */
+
 :root {
     --grey: #222;
     --orange: #FB9328;
@@ -11,18 +14,22 @@
     --black: #000;
 }
 
-/* COLORS */
-
 .white-text {
     color: var(--white);
+}
+
+.orange-text {
+    color: var(--orange);
 }
 
 .white-bg {
     background-color: var(--white);
 }
 
-.orange-text {
-    color: var(--orange);
+.mobile-dark-bg {
+    @media only screen and (max-width : 1223px) {
+        background-color: rgba(15, 15, 15, 0.47);
+    }
 }
 
 
@@ -127,27 +134,19 @@ img {
 }
 
 
+/* todo - !important */
 /* Controls and Globals */
 
-/* todo - !important , */
 .desktop-only {
-    display: none !important;
-
-    @media only screen and (min-width : 1224px) {
-        display: unset !important;
-    }
-}
-
-.mobile-only {
-    display: unset !important;
-
-    @media only screen and (min-width : 1224px) {
+    @media only screen and (max-width : 1223px) {
         display: none !important;
     }
 }
 
-.inline-link {
-    color: var(--orange);
+.mobile-only {
+    @media only screen and (min-width : 1224px) {
+        display: none !important;
+    }
 }
 
 .inline-link:hover {
@@ -386,21 +385,6 @@ img {
     }
 }
 
-.top-page-space,
-.mobile-home-bg {
-    background-color: rgba(15, 15, 15, 0.47);
-
-    @media only screen and (min-width : 1224px) {
-        background-color: var(--grey);
-    }
-}
-
-.top-page-space {
-    @media only screen and (min-width : 1224px) {
-        height: 180px;
-    }
-}
-
 .section-container {
     margin: 0 auto;
 
@@ -418,339 +402,325 @@ img {
             left: 50%;
             width: 1000px;
             margin-left: -500px;
-            padding: 110px 0 100px 0;
-        }
-    }
-
-    & .article-container {
-        position: relative;
-
-        @media only screen and (min-width : 1224px) {
-            width: 600px;
         }
 
-        & h1 {
-            color: var(--orange);
-            padding-bottom: 30px;
+        & .article-container {
+            position: relative;
 
             @media only screen and (min-width : 1224px) {
+                width: 600px;
+            }
+
+            & h1 {
+                color: var(--orange);
                 padding-bottom: 30px;
+
+                @media only screen and (min-width : 1224px) {
+                    padding-bottom: 30px;
+                }
+            }
+
+            & h2 {
+                padding-bottom: 5px;
+
+                @media only screen and (min-width : 1224px) {
+                    padding-bottom: 0;
+                }
+            }
+
+
+            & p {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 24px;
+            }
+
+            & .inline-wrapper * {
+                @media only screen and (min-width : 1224px) {
+                    display: inline;
+                }
+            }
+
+            & .item-wrapper,
+            .inline-wrapper {
+                padding-bottom: 40px;
+            }
+
+            &>*:last-child {
+                padding-bottom: 0;
             }
         }
 
-        & h2 {
-            padding-bottom: 5px;
+        /* #1 HOME */
+
+        & .home-container {
+            position: relative;
+            padding-top: 8vw;
 
             @media only screen and (min-width : 1224px) {
+                padding: 190px 0 100px 0;
+            }
+
+            & .desktop-home-title {
+                width: 550px;
+                padding-bottom: 60px;
+            }
+
+            & .mobile-home-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                color: var(--white);
+                width: 84vw;
+                height: 84vw;
+                padding-bottom: 8vw;
+
+                &>span {
+                    font-family: "Montserrat", sans-serif;
+                    padding-bottom: 20px;
+                    font-size: 36px;
+                    font-weight: 800;
+                    line-height: 54px;
+                }
+
+                &>h3 {
+                    line-height: 30px;
+                }
+            }
+
+            & .home-image-container {
+                position: absolute;
+                top: 0;
+                right: -8vw;
+                width: 100vw;
+
+                @media only screen and (min-width : 1224px) {
+                    top: 80px;
+                    right: -50px;
+                    width: 500px;
+                    height: 500px;
+                    mix-blend-mode: lighten;
+                }
+
+                & .home-image-responsive {
+                    margin-top: 100%;
+
+                    @media only screen and (min-width : 1224px) {
+                        margin-top: 0;
+                    }
+
+                    & .home-image {
+                        position: absolute;
+                        bottom: 0;
+                        mix-blend-mode: lighten;
+                        filter: blur(1.8px);
+                        -webkit-filter: blur(1.8px);
+                        opacity: 0.4;
+
+                        @media only screen and (min-width : 1224px) {
+                            mix-blend-mode: normal;
+                            filter: none;
+                            -webkit-filter: none;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            & .home-btns-container {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                width: 100%;
+            }
+        }
+
+
+        /* #2 ROADMAP */
+
+        & .roadmap-title,
+        .roadmap-footer {
+            padding-bottom: 80px;
+            text-align: center;
+
+            @media only screen and (min-width : 1224px) {
+                padding-bottom: 100px;
+            }
+
+            & span {
+                font-family: "Changa", sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 24px;
+
+                @media only screen and (min-width : 1224px) {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 45px;
+                }
+            }
+        }
+
+        & .roadmap-grid-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 330px;
+            height: 800px;
+
+            @media only screen and (min-width : 1224px) {
+                flex-direction: row;
+                width: 1000px;
+                height: auto;
+            }
+
+            & .grid-item {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+
+                @media only screen and (min-width : 1224px) {
+                    flex-direction: column;
+                    align-items: initial;
+                }
+
+                & .grid-item-line {
+                    display: none;
+
+                    @media only screen and (min-width : 1224px) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 130px;
+
+                    }
+
+                    & img {
+                        height: 82px;
+                        width: 13px;
+                    }
+                }
+
+                & .grid-item-image {
+                    width: 75px;
+                    height: 75px;
+
+                    @media only screen and (min-width : 1224px) {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+
+                & .grid-item-text {
+                    position: relative;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+
+                    & h5 {
+                        width: 242px;
+
+                        @media only screen and (min-width : 1224px) {
+                            position: absolute;
+                            left: -78px;
+                            width: 256px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                & .grid-item-space {
+                    display: none;
+
+                    @media only screen and (min-width : 1224px) {
+                        display: block;
+                        width: 100px;
+                        height: 200px;
+                    }
+                }
+            }
+
+            & .reverse-grid-item {
+                flex-direction: row;
+
+                @media only screen and (min-width : 1224px) {
+                    flex-direction: column-reverse;
+                }
+            }
+
+            ;
+        }
+
+        .roadmap-footer {
+            padding-top: 50px;
+            padding-bottom: 0;
+
+            @media only screen and (min-width : 1224px) {
+                padding-top: 100px;
                 padding-bottom: 0;
             }
         }
 
 
-        & p {
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 24px;
-        }
+        /* #3 WHAT-THE-BALLS */
 
-        & .inline-wrapper * {
+        & .wtb-image {
             @media only screen and (min-width : 1224px) {
-                display: inline;
+                display: block;
+                position: absolute;
+                top: 225px;
+                right: -30px;
+                width: 380px;
+                height: 380px;
             }
         }
 
-        & .item-wrapper,
-        .inline-wrapper {
-            padding-bottom: 40px;
+
+        /* #4 CRYPTO */
+
+        & .crypto-article {
+            @media only screen and (min-width : 1224px) {
+                position: relative;
+                left: 300px;
+            }
         }
 
-        &>*:last-child {
-            padding-bottom: 0;
+        .crypto-image {
+            @media only screen and (min-width : 1224px) {
+                display: block;
+                position: absolute;
+                top: 265px;
+                left: -100px;
+                width: 360px;
+                height: 500px;
+            }
         }
-    }
 
 
-    /* #1 HOME */
+        /* #5 NARRATIVES */
 
-    & .desktop-home-title {
-        display: none;
-
-        @media only screen and (min-width : 1224px) {
-            display: block;
-            width: 550px;
+        & .narratives-article {
             padding-bottom: 60px;
         }
-    }
 
-    & .home-image-container {
-        display: inline-block;
-        position: relative;
-        right: 10%;
-        width: 120%;
-
-        @media only screen and (min-width : 1224px) {
-            position: absolute;
-            right: -50px;
-            top: 0;
-            width: 500px;
-            height: 500px;
-            mix-blend-mode: lighten;
-        }
-
-        & .home-image-responsive {
-            margin-top: 100%;
-
+        & .narratives-image {
             @media only screen and (min-width : 1224px) {
-                margin-top: 0;
-            }
-
-            & .home-image {
+                display: block;
                 position: absolute;
-                bottom: 0;
-                mix-blend-mode: lighten;
-                filter: blur(1.8px);
-                -webkit-filter: blur(1.8px);
-                opacity: 0.4;
-
-                @media only screen and (min-width : 1224px) {
-                    mix-blend-mode: normal;
-                    filter: none;
-                    -webkit-filter: none;
-                    opacity: 1;
-                }
+                top: 340px;
+                right: -100px;
+                width: 480px;
+                height: 480px;
             }
-        }
-    }
-
-    & .home-btns-container {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        
-        @media only screen and (min-width : 1224px) {
-            padding-bottom: 100px;
-        }
-    }
-
-    & .mobile-home-content {
-        display: block;
-    }
-
-    & .mobile-home-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        color: var(--white);
-
-
-        &>span {
-            font-family: "Montserrat", sans-serif;
-            padding-bottom: 20px;
-            font-size: 36px;
-            font-weight: 800;
-            line-height: 54px;
-        }
-
-        &>h3 {
-            line-height: 30px;
-        }
-
-    }
-
-    /* #2 ROADMAP */
-
-    & .roadmap-title,
-    .roadmap-footer {
-        padding-bottom: 80px;
-        text-align: center;
-
-        @media only screen and (min-width : 1224px) {
-            padding-bottom: 100px;
-        }
-
-        & span {
-            font-family: "Changa", sans-serif;
-            font-weight: 300;
-            font-size: 20px;
-            line-height: 24px;
-
-            @media only screen and (min-width : 1224px) {
-                font-size: 36px;
-                font-weight: 400;
-                line-height: 45px;
-            }
-        }
-    }
-
-    & .roadmap-grid-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 330px;
-        height: 800px;
-
-        @media only screen and (min-width : 1224px) {
-            flex-direction: row;
-            width: 1000px;
-            height: auto;
-        }
-
-        & .grid-item {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            align-items: center;
-
-            @media only screen and (min-width : 1224px) {
-                flex-direction: column;
-                align-items: initial;
-            }
-
-            & .grid-item-line {
-                display: none;
-
-                @media only screen and (min-width : 1224px) {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 130px;
-
-                }
-
-                & img {
-                    height: 82px;
-                    width: 13px;
-                }
-            }
-
-            & .grid-item-image {
-                width: 75px;
-                height: 75px;
-
-                @media only screen and (min-width : 1224px) {
-                    width: 100px;
-                    height: 100px;
-                }
-            }
-
-            & .grid-item-text {
-                position: relative;
-                height: 70px;
-                display: flex;
-                align-items: center;
-
-                & h5 {
-                    width: 242px;
-
-                    @media only screen and (min-width : 1224px) {
-                        position: absolute;
-                        left: -78px;
-                        width: 256px;
-                        text-align: center;
-                    }
-                }
-            }
-
-            & .grid-item-space {
-                display: none;
-
-                @media only screen and (min-width : 1224px) {
-                    display: block;
-                    width: 100px;
-                    height: 200px;
-                }
-            }
-        }
-
-        & .reverse-grid-item {
-            flex-direction: row;
-
-            @media only screen and (min-width : 1224px) {
-                flex-direction: column-reverse;
-            }
-        }
-
-        ;
-    }
-
-    .roadmap-footer {
-        padding-top: 50px;
-        padding-bottom: 0;
-
-        @media only screen and (min-width : 1224px) {
-            padding-top: 100px;
-            padding-bottom: 0;
-        }
-    }
-
-
-    /* #3 WHAT-THE-BALLS */
-
-    & .wtb-image {
-        display: none;
-
-        @media only screen and (min-width : 1224px) {
-            display: block;
-            position: absolute;
-            top: 225px;
-            right: -30px;
-            width: 380px;
-            height: 380px;
-        }
-    }
-
-
-    /* #4 CRYPTO */
-
-    & .crypto {
-        @media only screen and (min-width : 1224px) {
-            position: relative;
-            left: 300px;
-        }
-    }
-
-    .crypto-image {
-        display: none;
-
-        @media only screen and (min-width : 1224px) {
-            display: block;
-            position: absolute;
-            top: 265px;
-            left: -100px;
-            width: 360px;
-            height: 500px;
-        }
-    }
-
-
-    /* #5 NARRATIVES */
-
-    & .article-narratives {
-        padding-bottom: 60px;
-    }
-
-    & .narratives-image {
-        display: none;
-
-        @media only screen and (min-width : 1224px) {
-            display: block;
-            position: absolute;
-            top: 340px;
-            right: -100px;
-            width: 480px;
-            height: 480px;
         }
     }
 
 
     /* #6 SOCIALS & #7 TOKENOMICS & #8 BUY */
 
-    & .section-links {
+    & .links-section {
         padding-bottom: 0;
 
         & .links-title {
@@ -869,7 +839,7 @@ img {
 
     /* #8 FOOTER */
 
-    & .footer {
+    & .footer-section {
         padding-bottom: 20px;
 
         & .footer-content {
